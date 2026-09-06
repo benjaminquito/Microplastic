@@ -1,0 +1,25 @@
+project:
+  name: microscan-demo
+  seed: 20260906
+
+data:
+  root: data/demo
+  image_size: 32
+  channels: 1
+  allowed_extensions: [".png", ".jpg", ".jpeg", ".tif", ".tiff"]
+
+model:
+  architecture: tiny_cnn
+  width: 8
+
+training:
+  epochs: 6
+  batch_size: 12
+  learning_rate: 0.003
+  weight_decay: 0.0001
+  num_workers: 0
+  device: cpu
+
+output:
+  directory: artifacts/demo
+

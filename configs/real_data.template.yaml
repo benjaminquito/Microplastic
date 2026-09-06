@@ -1,0 +1,26 @@
+# Copy to configs/local-real.yaml (ignored by git), then edit values.
+project:
+  name: microscan-real-data
+  seed: 20260906
+
+data:
+  root: /absolute/path/to/dataset
+  image_size: 128
+  channels: 1  # Use 3 for RGB data.
+  allowed_extensions: [".png", ".jpg", ".jpeg", ".tif", ".tiff"]
+
+model:
+  architecture: tiny_cnn
+  width: 16
+
+training:
+  epochs: 30
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  num_workers: 0  # Keep 0 for the strongest cross-platform determinism.
+  device: auto
+
+output:
+  directory: artifacts/real-data
+
