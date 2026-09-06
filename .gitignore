@@ -1,0 +1,23 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Data and generated model artifacts are intentionally not versioned.
+data/*
+!data/README.md
+!data/.gitkeep
+artifacts/
+
+# Local secrets and overrides.
+.env
+.env.*
+!.env.example
+configs/local*.yaml
+
